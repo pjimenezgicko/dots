@@ -1,4 +1,4 @@
-#include "Themes/baskerville-ivorylight"
+#include "/home/pjj/.config/baskerville-ivorylight"
 
 URxvt.font: xft:Sauce Code Powerline:size=15
 !URxvt.font: Input-Regular_(InputMonoNarrow-Light)
