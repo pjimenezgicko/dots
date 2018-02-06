@@ -1,6 +1,4 @@
 #--------------------Aliases--------------------#
-#ACL2-S eclipse launcher
-alias acl2s='~/Documents/Class/Logic_and_Computation_CS2800/eclipse/eclipse&|'
 #Todo.sh
 #Shorten command
 alias t='todo.sh -d /home/pjj/Todolist/todo.txt-cli/todo.cfg'

@@ -2,7 +2,7 @@
 
 URxvt.font: xft:Sauce Code Powerline:size=15
 !URxvt.font: Input-Regular_(InputMonoNarrow-Light)
-URxvt.fontspace: -6
+URxvt.fontspace: 6
 URxvt.jumpScroll: false
 URxvt.scrollBar: false
 URxvt.fading: 15
