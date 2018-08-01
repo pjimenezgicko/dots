@@ -1,9 +1,14 @@
 #--------------------Aliases--------------------#
-#ACL2-S eclipse launcher
-alias acl2s='~/Documents/Class/Logic_and_Computation_CS2800/eclipse/eclipse&|'
+#NVM slowdown fix a la http://www.growingwiththeweb.com/2018/01/slow-nvm-init.html
+#
+# Defer initialization of nvm until nvm, node or a node-dependent command is
+# run. Ensure this block is only run once if .bashrc gets sourced multiple times
+# by checking whether __init_nvm is a function.
+
+
 #Todo.sh
 #Shorten command
-alias t='todo.sh -d /home/pjj/Todolist/todo.txt-cli/todo.cfg'
+#alias t='todo.sh -d /home/pjj/Todolist/todo.txt-cli/todo.cfg'
 
 #terminal
 export TERM='xterm-256color'
@@ -12,7 +17,7 @@ export TERM='xterm-256color'
 export TODOTXT_DEFAULT_ACTION=ls
 
 #Cayley config
-export CAYLEY_CFG=$HOME/.config/cayley/cayley.yml
+#export CAYLEY_CFG=$HOME/.config/cayley/cayley.yml
 
 #Go
 export GOPATH=$HOME/go
@@ -26,17 +31,14 @@ alias zc='vim ~/.zshrc'
 #Xresources
 alias xc='vim ~/.Xresources'
 
-#i3
-alias 3c='vim ~/.config/i3/config'
-
 #Polybar
 alias pc='vim ~/.config/polybar/config'
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/home/pjj/Todolist/todo.txt-cli:/usr/local:$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/home/pjj/Todolist/todo.txt-cli:/usr/local:$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin:/opt
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pjj/.oh-my-zsh
+export ZSH=/home/pjj/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -86,7 +88,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages git systemd archlinux tmux fasd sudo sprunge wd)
+plugins=(colored-man-pages git archlinux tmux sudo )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,4 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -z "$PS1" ] && return
-chpwd() ls
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

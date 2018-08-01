@@ -1,8 +1,8 @@
-#include "Themes/baskerville-ivorylight"
+#include "/home/pjj/.config/baskerville-ivorylight"
 
-URxvt.font: xft:Sauce Code Powerline:size=15
+URxvt.font: xft:Sauce Code Powerline:size=9:antialias=true
 !URxvt.font: Input-Regular_(InputMonoNarrow-Light)
-URxvt.fontspace: -6
+URxvt.fontspace: 10 
 URxvt.jumpScroll: false
 URxvt.scrollBar: false
 URxvt.fading: 15
@@ -12,7 +12,7 @@ URxvt.tripleclickwords: true
 URxvt.transparent: true
 URxvt.shading: 15
 
-URxvt*saveLines: 12000
+URxvt*saveLines: 0
 URxvt*scrollstyle:plain
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
@@ -29,7 +29,6 @@ URxvt.tabbed.title: no
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
-! Copyright: 2017 leofa
 ! ------------------------------------------------------------------------------
 ! "Color scheme for normal row" Set from: File
 rofi.color-normal:                   argb:3c1d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
@@ -40,4 +39,4 @@ rofi.color-active:                   argb:2c1d1f21, #65acff, argb:e44b5160, #449
 ! "Color scheme window" Set from: File
 rofi.color-window:                   argb:f22d303b, #7c8389, #1d1f21
 ! "Separator style (none, dash, solid)" Set from: XResources
-rofi.separator-style:                solid
+rofi.separator-style:                sold
